@@ -8,3 +8,7 @@ blockquote {
   font-weight: lighter;
   color: grey;
 }
+
+.bang {
+  font-size: 20px;
+}

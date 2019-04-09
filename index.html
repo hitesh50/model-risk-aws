@@ -15,7 +15,7 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -36,7 +36,7 @@
   <div class="container" style="padding-top: 10%; padding-bottom: 5em; margin-bottom:5em">
     <div class="row">
       <div class="eight columns" >
-        <h1 style="color: white">A quantitative risk model</h1>
+        <h1 style="color: white; font-weight: 400">A probabilistic risk model.</h1>
         <h4 style="color: lightgrey">Codified expert opinion for faster risk decisions.</h3>
       </div>
       <div class="four columns" style="text-align: center; font-size: 90px">
@@ -47,7 +47,7 @@
 </div>
   <div class="container">
     <div class="row">
-      <div>
+      <div style="margin-bottom: 5em">
         <h4 style="text-align: center; margin-bottom: 2em;">A proof of concept by...</h4>
         <div class="row" style="margin-bottom: 2em">
           <div class="three columns" style="text-align: center">
@@ -72,23 +72,49 @@
     </div>
 
   </div>
-
+<div class="section">
   <div class="container">
     <div class="row">
       <div>
-        <h4>What's up?</h4>
-        <p>The "experts" above were shown randomized configurations for hundreds of AWS accounts. They forecasted the likelihood of the following scenario occurring for each configuration:</p>
-        <blockquote>AWS security detects or responds to an incident with this account in 1 year.</blockquote>
+        <p class="bang ten columns">Experts reviewed hundreds of randomized AWS security configurations. These experts are familiar with AWS security vulnerabilities, threats to AWS accounts, and incident response.</p>
+        <p class="two columns" style="padding-bottom: 5px; font-size: 65px; text-align: center">👥</p>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <p class="bang ten columns">A expert forecasting session recorded the judgements of these experts for each configuration. These are then tranformed into a statistical model representing their belifs as an entire panel.</p>
+        <p class="two columns" style="padding-bottom: 2px; font-size: 65px; text-align: center">🔭</p>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <p class="bang ten columns">The result is a simple model (like a bot!) that outputs forecasts that mimics panelist opinion. By referring to this model, we can reduce bias in future forecasts. </p>
+        <p class="two columns" style="padding-bottom: 2px; font-size: 65px; text-align: center">🤖</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <h4 style="text-align: center; margin-bottom: 2em;">The risk scenario...</h4>
+    <div class="row">
+      <div>
+        <blockquote style="margin-bottom: 2em">AWS security detects or responds to an incident with this account in 1 year.</blockquote>
         <p>The panelists assumed the account is primary production account, the account is owned by a tech company, and either AWS security or the account owner may escalate the incident.
       </div>
     </div>
 
   </div>
+</div>
 
-  <div class="container">
+  <hr />
+
+  <div class="container" style="margin-top: 2em">
     <div class="row">
       <div>
-        <h4>Questions about the account's configuration:</h4>
+        <h4>📋 Questions about the account's configuration:</h4>
         <form>
 
           <div class="row">
