@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>AWS Lens Model</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="section" style="background-color: #555;">
+  <div class="container" style="padding-top: 10%; padding-bottom: 5em; margin-bottom:5em">
+    <div class="row">
+      <div class="eight columns" >
+        <h1 style="color: white">A quantitative risk model</h1>
+        <h4 style="color: lightgrey">Codified expert opinion for faster risk decisions.</h3>
+      </div>
+      <div class="four columns" style="text-align: center; font-size: 90px">
+        🌧️
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="container">
+    <div class="row">
+      <div>
+        <h4 style="text-align: center; margin-bottom: 2em;">A proof of concept by...</h4>
+        <div class="row" style="margin-bottom: 2em">
+          <div class="three columns" style="text-align: center">
+            <div class="name">Travis</div>
+            <div>Security at Netflix</div>
+          </div>
+          <div class="three columns" style="text-align: center">
+            <div class="name">Will</div>
+            <div>Security at Netflix</div>
+          </div>
+          <div class="three columns" style="text-align: center">
+            <div class="name">Magoo</div>
+            <div>R10N</div>
+          </div>
+          <div class="three columns" style="text-align: center">
+            <div class="name">Brett</div>
+            <div>PhD @ University of Wisconsin</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div>
+        <h4>What's up?</h4>
+        <p>The "experts" above were shown randomized configurations for hundreds of AWS accounts. They forecasted the likelihood of the following scenario occurring for each configuration:</p>
+        <blockquote>AWS security detects or responds to an incident with this account in 1 year.</blockquote>
+        <p>The panelists assumed the account is primary production account, the account is owned by a tech company, and either AWS security or the account owner may escalate the incident.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div>
+        <h4>Questions about the account's configuration:</h4>
+        <form>
+
+          <div class="row">
+              <div>
+                <label>Is a "bastion" pattern enforced for SSH access?</label>
+                <select class="u-full-width" >
+                  <option value="Option 1">I don't know.</option>
+                  <option value="Option 2">Yes. There shouldn't be exceptions that bypass it.</option>
+                  <option value="Option 3">Yes. But, there are exceptions that bypass it.</option>
+                  <option value="Option 4">No. We allow direct SSH access.</option>
+                  <option value="Option 5">N/A. This account doesn't have compute resources, or SSH usage.</option>
+                </select>
+              </div>
+              <div>
+                <label >Is your AWS account and / or product source code repositories protected by more than simple password authentication?</label>
+                <select class="u-full-width" >
+                  <option value="Option 1">I don't know.</option>
+                  <option value="Option 2">Yes.</option>
+                  <option value="Option 3">No.</option>
+                </select>
+              </div>
+              <div>
+                <label >Are AWS root credentials secured with a hardware two-factor token?</label>
+                <select class="u-full-width" >
+                  <option value="Option 1">I don't know.</option>
+                  <option value="Option 2">Yes.</option>
+                  <option value="Option 3">No.</option>
+                </select>
+              </div>
+              <div>
+                <label >Is infrastructure in this account usually managed by "configuration as code"?</label>
+                <select class="u-full-width" >
+                  <option value="Option 1">I don't know.</option>
+                  <option value="Option 2">Yes, and exceptions violate policies or norms.</option>
+                  <option value="Option 3">Yes, partially.</option>
+                  <option value="Option 4">No.</option>
+                </select>
+              </div>
+              <div >
+                <label >Do you manage "secrets" so they are less accessible to engineers, source code, or configuration files?</label>
+                <select class="u-full-width" >
+                  <option value="Option 1">I don't know.</option>
+                  <option value="Option 2">Yes. Any unmanaged secrets are a rare exception.</option>
+                  <option value="Option 3">Yes. However,  unmanaged secrets are not a rare exception.</option>
+                  <option value="Option 4">No.</option>
+                </select>
+              </div>
+              <div>
+                <label >Are long lived IAM keys used within production infrastructure?</label>
+                <select class="u-full-width" >
+                  <option value="Option 1">I don't know.</option>
+                  <option value="Option 2">Yes, and this is an infrastructure pattern.</option>
+                  <option value="Option 3">Yes, though it is not an typical pattern.</option>
+                  <option value="Option 4">No, but they could be used.</option>
+                  <option value="Option 5">No, and it would be a surprise, incident, or violation if they were.</option>
+                </select>
+              </div>
+              <div>
+                <label >Have you improved CloudTrail logging beyond default settings in this account?</label>
+                <select class="u-full-width" >
+                  <option value="Option 1">I don't know.</option>
+                  <option value="Option 2">Yes.</option>
+                  <option value="Option 3">No.</option>
+                </select>
+              </div>
+              <div>
+                <label >If a vulnerable configuration change or suspicious API activity is escalated, is it investigated?</label>
+                <select class="u-full-width" >
+                  <option value="Option 1">I don't know.</option>
+                  <option value="Option 2">Very likely or always: No less than 90% of cases</option>
+                  <option value="Option 3">Probably: No less than 50% of cases</option>
+                  <option value="Option 4">Sometimes: No more than 50% of cases</option>
+                  <option value="Option 5">Rarely or never: No more than 10% of cases</option>
+                </select>
+              </div>
+          </div>
+          <input class="button-primary" type="submit" value="Submit">
+        </form>
+      </div>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
