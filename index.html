@@ -35,11 +35,11 @@
 <div class="section" style="background-color: #555;">
   <div class="container" style="padding-top: 10%; padding-bottom: 5em; margin-bottom:5em">
     <div class="row">
-      <div class="eight columns" >
+      <div class="eight columns" style="margin-top: 1em;">
         <h1 style="color: white; font-weight: 400">A probabilistic risk model.</h1>
         <h4 style="color: lightgrey">Codified expert opinion for faster risk decisions.</h3>
       </div>
-      <div class="four columns" style="text-align: center; font-size: 90px">
+      <div class="four columns" style="text-align: center; font-size: 95px">
         🌧️
       </div>
     </div>
@@ -76,19 +76,20 @@
   <div class="container">
     <div class="row">
       <div>
-        <p class="bang ten columns">Experts reviewed hundreds of randomized AWS security configurations. These experts are familiar with AWS security vulnerabilities, threats to AWS accounts, and incident response.</p>
+        <p class="bang ten columns">Experts reviewed hundreds of randomized AWS configurations. These experts are familiar with corporate data breaches within similar environments at large tech companies.</p>
         <p class="two columns" style="padding-bottom: 5px; font-size: 65px; text-align: center">👥</p>
       </div>
     </div>
     <div class="row">
       <div>
-        <p class="bang ten columns">A expert forecasting session recorded the judgements of these experts for each configuration. These are then tranformed into a statistical model representing their belifs as an entire panel.</p>
-        <p class="two columns" style="padding-bottom: 2px; font-size: 65px; text-align: center">🔭</p>
+<p class="two columns" style="padding-bottom: 2px; font-size: 65px; text-align: center">🔭</p>
+        <p class="bang ten columns">A expert forecasting session recorded the judgements of these experts for each AWS configuration. These are then tranformed into a statistical model representing their beliefs as an entire panel, instead of individuals.</p>
+
       </div>
     </div>
     <div class="row">
       <div>
-        <p class="bang ten columns">The result is a simple model (like a bot!) that outputs forecasts that mimics panelist opinion. By referring to this model, we can reduce bias in future forecasts. </p>
+        <p class="bang ten columns">The result is a simple model (like a bot!) that produces forecasts and mimics panelist opinion when given a configuration. By referencing this model, we can reduce human bias in future forecasts.</p>
         <p class="two columns" style="padding-bottom: 2px; font-size: 65px; text-align: center">🤖</p>
       </div>
     </div>
@@ -96,25 +97,37 @@
   </div>
 </div>
 
-<div class="section">
+<div class="section" style="background-color: lightgrey; padding-top: 4em; padding-bottom: 4em; color: white;">
   <div class="container">
     <h4 style="text-align: center; margin-bottom: 2em;">The risk scenario...</h4>
     <div class="row">
       <div>
-        <blockquote style="margin-bottom: 2em">AWS security detects or responds to an incident with this account in 1 year.</blockquote>
-        <p>The panelists assumed the account is primary production account, the account is owned by a tech company, and either AWS security or the account owner may escalate the incident.
+        <blockquote style="font-size: 24px; color: red;">AWS security detects or responds to an incident with this account in 1 year.</blockquote>
       </div>
     </div>
 
   </div>
 </div>
 
-  <hr />
+
+
+<div class="section" style="margin-top: 2em">
+  <div class="container">
+    <p class="bang">Each panelist assumes the accounts they reviewed are the primary production account owned by a tech company. They also assume that AWS security or the account owner may escalate the incident, and both may confirm the scenario.</p>
+    <p class="bang">The panelists agreed that for substantial incidents worth measuring, a victim would likely involve AWS Security. They wouldn't need to identify it as a security incident.</p>
+  </div>
+</div>
+
+<div class="section" style="background-color: darkgrey; padding-top: 3em; padding-bottom: 2em; color: white;">
+  <div class="container">
+    <h4 style="text-align: center;">How would the panelists forecast <i>your</i> account? 🧐</h4>
+  </div>
+</div>
 
   <div class="container" style="margin-top: 2em">
     <div class="row">
       <div>
-        <h4>📋 Questions about the account's configuration:</h4>
+        <h4>Please describe the account's configuration...</h4>
         <form>
 
           <div class="row">
