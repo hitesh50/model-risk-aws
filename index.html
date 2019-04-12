@@ -27,6 +27,168 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
+  <script>
+
+
+  function test() {
+
+    var q1 = document.getElementById("q1").options[document.getElementById("q1").selectedIndex].value;
+    var q2 = document.getElementById("q2").options[document.getElementById("q2").selectedIndex].value;
+    var q3 = document.getElementById("q3").options[document.getElementById("q3").selectedIndex].value;
+    var q4 = document.getElementById("q4").options[document.getElementById("q4").selectedIndex].value;
+    var q5 = document.getElementById("q5").options[document.getElementById("q5").selectedIndex].value;
+    var q6 = document.getElementById("q6").options[document.getElementById("q6").selectedIndex].value;
+    var q7 = document.getElementById("q7").options[document.getElementById("q7").selectedIndex].value;
+    var q8 = document.getElementById("q8").options[document.getElementById("q8").selectedIndex].value;
+
+    c0 = -1.7113856421180562
+
+    switch(q1) {
+      case "1":
+        c1 =  1.70562500e-02;
+        break;
+      case "2":
+        c1 =  2.55168238e-02;
+        break;
+      case "3":
+        c1 =  3.11728082e-02;
+        break;
+      case "4":
+        c1 = -7.37458821e-02;
+        break;
+      default:
+        c1 = 0;
+    }
+
+    switch(q2) {
+      case "1":
+        c2 =  -5.77170066e-02;
+        break;
+      case "2":
+        c2 =  5.77170066e-02;
+        break;
+      default:
+        c2 = 0;
+    }
+
+    switch(q3) {
+      case "1":
+        c3 =  -3.62861774e-02;
+        break;
+      case "2":
+        c3 =  3.62861774e-02;
+        break;
+      default:
+        c3 = 0;
+    }
+
+    switch(q4) {
+      case "1":
+        c4 =  -7.79011327e-02;
+        break;
+      case "2":
+        c4 =  -3.44907376e-02;
+        break;
+      case "3":
+        c4 =  1.12391870e-01;
+        break;
+      default:
+        c4 = 0;
+    }
+
+    switch(q5) {
+      case "1":
+        c5 =  -2.27354174e-01;
+        break;
+      case "2":
+        c5 =  6.18927075e-03;
+        break;
+      case "3":
+        c5 =  2.21164903e-01;
+        break;
+      default:
+        c5 = 0;
+    }
+
+    switch(q6) {
+      case "1":
+        c6 =  3.57748332e-01;
+        break;
+      case "2":
+        c6 =  -5.48670160e-02;
+        break;
+      case "3":
+        c6 =  2.05622859e-04;
+        break;
+      case "4":
+        c6 = -3.03086939e-01;
+        break;
+      default:
+        c6 = 0;
+    }
+
+    switch(q7) {
+      case "1":
+        c7 =  -2.10054815e-02;
+        break;
+      case "2":
+        c7 =  2.10054815e-02;
+        break;
+      default:
+        c7 = 0;
+    }
+
+    switch(q8) {
+      case "1":
+        c8 =  -7.41747297e-02;
+        break;
+      case "2":
+        c8 =  -4.82234204e-03;
+        break;
+      case "3":
+        c8 =  -2.56924717e-02;
+        break;
+      case "4":
+        c8 = 1.04689543e-01;
+        break;
+      default:
+        c8 = 0;
+    }
+
+    var lBreach = (c0 + c1 + c2 + c3 + c4 + c5 + c6 + c7 + c8)
+
+    lBreach =- lBreach
+
+    console.log("Constant:")
+    console.log(c0)
+    console.log("Coefficient 1:")
+    console.log(c1)
+    console.log("Coefficient 2:")
+    console.log(c2)
+    console.log("Coefficient 3:")
+    console.log(c3)
+    console.log("Coefficient 4:")
+    console.log(c4)
+    console.log("Coefficient 5:")
+    console.log(c5)
+    console.log("Coefficient 6:")
+    console.log(c6)
+    console.log("Coefficient 7:")
+    console.log(c7)
+    console.log("Coefficient 8:")
+    console.log(c8)
+    console.log("Lbreach:")
+    console.log(lBreach)
+
+    alert("Probability of breach:" + 1 / (1 + Math.exp(lBreach)))
+
+    return;
+
+  }
+
+
+  </script>
+
 </head>
 <body>
 
@@ -128,84 +290,84 @@
     <div class="row">
       <div>
         <h4>Please describe the account's configuration...</h4>
-        <form>
+
 
           <div class="row">
               <div>
                 <label>Is a "bastion" pattern enforced for SSH access?</label>
-                <select class="u-full-width" >
-                  <option value="Option 1">I don't know.</option>
-                  <option value="Option 2">Yes. There shouldn't be exceptions that bypass it.</option>
-                  <option value="Option 3">Yes. But, there are exceptions that bypass it.</option>
-                  <option value="Option 4">No. We allow direct SSH access.</option>
-                  <option value="Option 5">N/A. This account doesn't have compute resources, or SSH usage.</option>
+                <select id="q1" class="u-full-width" >
+                  <option value="0">I don't know.</option>
+                  <option value="1">Yes. There shouldn't be exceptions that bypass it.</option>
+                  <option value="2">Yes. But, there are exceptions that bypass it.</option>
+                  <option value="3">No. We allow direct SSH access.</option>
+                  <option value="4">N/A. This account doesn't have compute resources, or SSH usage.</option>
                 </select>
               </div>
               <div>
                 <label >Is your AWS account and / or product source code repositories protected by more than simple password authentication?</label>
-                <select class="u-full-width" >
-                  <option value="Option 1">I don't know.</option>
-                  <option value="Option 2">Yes.</option>
-                  <option value="Option 3">No.</option>
+                <select id="q2" class="u-full-width" >
+                  <option value="0">I don't know.</option>
+                  <option value="1">Yes.</option>
+                  <option value="2">No.</option>
                 </select>
               </div>
               <div>
                 <label >Are AWS root credentials secured with a hardware two-factor token?</label>
-                <select class="u-full-width" >
-                  <option value="Option 1">I don't know.</option>
-                  <option value="Option 2">Yes.</option>
-                  <option value="Option 3">No.</option>
+                <select id="q3" class="u-full-width" >
+                  <option value="0">I don't know.</option>
+                  <option value="1">Yes.</option>
+                  <option value="2">No.</option>
                 </select>
               </div>
               <div>
                 <label >Is infrastructure in this account usually managed by "configuration as code"?</label>
-                <select class="u-full-width" >
-                  <option value="Option 1">I don't know.</option>
-                  <option value="Option 2">Yes, and exceptions violate policies or norms.</option>
-                  <option value="Option 3">Yes, partially.</option>
-                  <option value="Option 4">No.</option>
+                <select id="q4" class="u-full-width" >
+                  <option value="0">I don't know.</option>
+                  <option value="1">Yes, and exceptions violate policies or norms.</option>
+                  <option value="2">Yes, partially.</option>
+                  <option value="3">No.</option>
                 </select>
               </div>
               <div >
                 <label >Do you manage "secrets" so they are less accessible to engineers, source code, or configuration files?</label>
-                <select class="u-full-width" >
-                  <option value="Option 1">I don't know.</option>
-                  <option value="Option 2">Yes. Any unmanaged secrets are a rare exception.</option>
-                  <option value="Option 3">Yes. However,  unmanaged secrets are not a rare exception.</option>
-                  <option value="Option 4">No.</option>
+                <select id="q5" class="u-full-width" >
+                  <option value="0">I don't know.</option>
+                  <option value="1">Yes. Any unmanaged secrets are a rare exception.</option>
+                  <option value="2">Yes. However,  unmanaged secrets are not a rare exception.</option>
+                  <option value="3">No.</option>
                 </select>
               </div>
               <div>
                 <label >Are long lived IAM keys used within production infrastructure?</label>
-                <select class="u-full-width" >
-                  <option value="Option 1">I don't know.</option>
-                  <option value="Option 2">Yes, and this is an infrastructure pattern.</option>
-                  <option value="Option 3">Yes, though it is not an typical pattern.</option>
-                  <option value="Option 4">No, but they could be used.</option>
-                  <option value="Option 5">No, and it would be a surprise, incident, or violation if they were.</option>
+                <select id="q6" class="u-full-width" >
+                  <option value="0">I don't know.</option>
+                  <option value="1">Yes, and this is an infrastructure pattern.</option>
+                  <option value="2">Yes, though it is not an typical pattern.</option>
+                  <option value="3">No, but they could be used.</option>
+                  <option value="4">No, and it would be a surprise, incident, or violation if they were.</option>
                 </select>
               </div>
               <div>
                 <label >Have you improved CloudTrail logging beyond default settings in this account?</label>
-                <select class="u-full-width" >
-                  <option value="Option 1">I don't know.</option>
-                  <option value="Option 2">Yes.</option>
-                  <option value="Option 3">No.</option>
+                <select id="q7" class="u-full-width" >
+                  <option value="0">I don't know.</option>
+                  <option value="1">Yes.</option>
+                  <option value="2">No.</option>
                 </select>
               </div>
               <div>
                 <label >If a vulnerable configuration change or suspicious API activity is escalated, is it investigated?</label>
-                <select class="u-full-width" >
-                  <option value="Option 1">I don't know.</option>
-                  <option value="Option 2">Very likely or always: No less than 90% of cases</option>
-                  <option value="Option 3">Probably: No less than 50% of cases</option>
-                  <option value="Option 4">Sometimes: No more than 50% of cases</option>
-                  <option value="Option 5">Rarely or never: No more than 10% of cases</option>
+                <select id="q8" class="u-full-width" >
+                  <option value="0">I don't know.</option>
+                  <option value="1">Very likely or always: No less than 90% of cases</option>
+                  <option value="2">Probably: No less than 50% of cases</option>
+                  <option value="3">Sometimes: No more than 50% of cases</option>
+                  <option value="4">Rarely or never: No more than 10% of cases</option>
                 </select>
               </div>
           </div>
-          <input class="button-primary" type="submit" value="Submit">
-        </form>
+          <input onclick="test()" class="button-primary" type="submit" value="Submit">
+
       </div>
   </div>
 
