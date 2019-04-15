@@ -184,8 +184,9 @@
     var answerTest = document.getElementById("answer");
     var hiddenanswer = document.getElementById("hiddenanswer");
 
-    var answerString = "There is a " + ((1 / (1 + Math.exp(lBreach))) * 100).toFixed(2) + "% chance that AWS Security will detect or respond to an incident with this account in one year."
-    answerTest.value = answerString
+    var answerString = ((1 / (1 + Math.exp(lBreach))) * 100).toFixed(2) + "%"
+    //var answerString = "There is a " + ((1 / (1 + Math.exp(lBreach))) * 100).toFixed(2) + "% chance that AWS Security will detect or respond to an incident with this account in one year."
+    answerTest.innerHTML = answerString
 
 
     return;
@@ -386,23 +387,10 @@
       <span class="close">&times;</span>
       <h2 style="text-align: center">🤖</h2>
 
-      <input type="text" id="answer" style="width: 800px"></input><br />
-      <button onclick="copy()" id="copysuccess">Copy text</button>
-      <script>
-        function copy() {
-          /* Get the text field */
-          var copyText = document.getElementById("answer");
+      <h1 style="text-align: center" id="answer"></h1><br />
+      
+      <blockquote style="font-size: 24px; color: red;">AWS security detects or responds to an incident with this account in 1 year.</blockquote>
 
-          /* Select the text field */
-          copyText.select();
-
-          /* Copy the text inside the text field */
-          document.execCommand("copy");
-
-          document.getElementById("copysuccess").innerHTML = "copied";
-
-        }
-    </script>
     </div>
 
   </div>
